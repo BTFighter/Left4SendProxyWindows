@@ -1,3 +1,6 @@
+# Note:
+Unofficial. This was an attempt to create a workflow for Windows, but I'm inexperienced on Github so I gave up. Now this will be used for keeping pre-compiled Windows versions until Windows is officially supported.
+
 # Left4SendProxy
 
 TheByKotik's SendProxy, which is a fork of Afronanny's SendProxy Manager [extension](https://forums.alliedmods.net/showthread.php?t=169795). This repository provides binaries for Left 4 Dead 2 through Github Actions.
