@@ -19,7 +19,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          choco install python --version 3.9.5
+          choco install python --version 3.10
           choco install git
           choco install clang
           choco install cmake
@@ -58,7 +58,7 @@ jobs:
           cd extension
           mkdir build
           cd build
-          python../configure.py --hl2sdk-root=../../alliedmodders --sm-path=../../alliedmodders/sourcemod --mms-path=../../alliedmodders/mmsource-1.10 --sdks l4d,l4d2
+          python ../configure.py --sm-path="../../../sourcemod" --enable-optimize --sdks="l4d2" --mms-path="../../../mmsource" --symbol-files ambuild
 
       - name: Run AMBuild
         run: |
@@ -94,12 +94,12 @@ jobs:
           echo "TAG=$(curl -s "https://api.github.com/repos/${{ github.repository }}/tags" | jq -r ".[0].name")" >> $GITHUB_ENV
 
       - name: Zip sourcemod directory
-        run: (cd /tmp/sendproxy/sourcemod/ && zip -r /tmp/linux_release.zip.)
+        run: (cd /tmp/sendproxy/sourcemod/ && zip -r /tmp/windows_release.zip.)
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.TAG }}
-          files: /tmp/linux_release.zip
+          files: /tmp/windows_release.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
