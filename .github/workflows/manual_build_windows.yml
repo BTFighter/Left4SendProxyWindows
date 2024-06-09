@@ -51,7 +51,7 @@ jobs:
         run: |
           cd alliedmodders
           git clone https://github.com/alliedmodders/ambuild
-          pip install./ambuild
+          pip install -e./ambuild
 
       - name: Configure AMBuild
         run: |
