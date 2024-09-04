@@ -1,3 +1,6 @@
+# Archive Notice:
+Outdated, use jensewe's [fork](https://github.com/jensewe/Left4SendProxy) instead.
+
 # Note:
 Unofficial. This was an attempt to create a workflow for Windows, but I'm inexperienced on Github so I gave up. Now this will be used for keeping pre-compiled Windows versions until Windows is officially supported.
 
